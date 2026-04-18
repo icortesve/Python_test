@@ -8,8 +8,6 @@ cantantes = [
     {"nombre": "Chayanne", "pais": "Puerto Rico"}
 ]
 
-
-
 # Diccionario con listas
 ciudades = {
     "México": ["Ciudad de México", "Guadalajara", "Cancún"],
@@ -37,6 +35,32 @@ coordenadas = [
 # print(coordenadas)
 
 ## Solución dinámica (no conociendo valores de las listas)
+
+# 🔍 1. Reemplazar 3 por 6 en matriz (búsqueda)
+for fila in matriz:
+    for i in range(len(fila)):
+        if fila[i] == 3:
+            fila[i] = 6
+#print(matriz)
+
+# 🔍 2. Cambiar nombre buscando valor
+for cantante in cantantes:
+    if cantante["nombre"] == "Ricky Martin":
+        cantante["nombre"] = "Enrique Martin Morales"
+#print(cantantes)
+
+# 🔍 3. Cambiar "Cancún" por "Monterrey"
+for pais, lista_ciudades in ciudades.items():
+    for i in range(len(lista_ciudades)):
+        if lista_ciudades[i] == "Cancún":
+            lista_ciudades[i] = "Monterrey"
+#print(ciudades)
+
+# 🔍 4. Cambiar latitud (sin asumir posición)
+for coord in coordenadas:
+    if "latitud" in coord:
+        coord["latitud"] = 9.9355431
+#print(coordenadas)
 
 print("Matriz:", matriz)
 print("Cantantes:", cantantes)
