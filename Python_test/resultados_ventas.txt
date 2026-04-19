@@ -1,0 +1,84 @@
+ANÁLISIS DE VENTAS
+
+Autor: Iván Cortés
+Fecha: 2026
+
+--------------------------------------------------
+
+1. Lista de ventas original:
+
+[
+{"fecha": "2021-01-01", "producto": "Agar", "cantidad": 2, "precio": 100000},
+{"fecha": "2022-02-01", "producto": "Extracto de Maltosa", "cantidad": 5, "precio": 80000},
+{"fecha": "2023-03-02", "producto": "Nitrato de Sodio", "cantidad": 1, "precio": 50000},
+{"fecha": "2024-04-02", "producto": "Cloruro de Sodio", "cantidad": 3, "precio": 1000},
+{"fecha": "2025-05-03", "producto": "Hidróxido de Potasio", "cantidad": 4, "precio": 10000}
+]
+
+--------------------------------------------------
+
+2. Ingresos totales:
+
+Agar: 2 * 100000 = 200000  
+Extracto de Maltosa: 5 * 80000 = 400000  
+Nitrato de Sodio: 1 * 50000 = 50000  
+Cloruro de Sodio: 3 * 1000 = 3000  
+Hidróxido de Potasio: 4 * 10000 = 40000  
+
+Ingreso total = 693000
+
+--------------------------------------------------
+
+3. Producto más vendido:
+
+Producto: Extracto de Maltosa  
+Cantidad total vendida: 5  
+
+--------------------------------------------------
+
+4. Precio promedio por producto:
+
+Agar: 100000  
+Extracto de Maltosa: 80000  
+Nitrato de Sodio: 50000  
+Cloruro de Sodio: 1000  
+Hidróxido de Potasio: 10000  
+
+--------------------------------------------------
+
+5. Ingresos por día:
+
+2021-01-01: 200000  
+2022-02-01: 400000  
+2023-03-02: 50000  
+2024-04-02: 3000  
+2025-05-03: 40000  
+
+--------------------------------------------------
+
+6. Resumen de ventas por producto:
+
+Agar:
+- cantidad_total: 2
+- ingresos_totales: 200000
+- precio_promedio: 100000
+
+Extracto de Maltosa:
+- cantidad_total: 5
+- ingresos_totales: 400000
+- precio_promedio: 80000
+
+Nitrato de Sodio:
+- cantidad_total: 1
+- ingresos_totales: 50000
+- precio_promedio: 50000
+
+Cloruro de Sodio:
+- cantidad_total: 3
+- ingresos_totales: 3000
+- precio_promedio: 1000
+
+Hidróxido de Potasio:
+- cantidad_total: 4
+- ingresos_totales: 40000
+- precio_promedio: 10000
