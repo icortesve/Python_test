@@ -9,19 +9,23 @@ class Usuario:
     def hacer_compra(self, monto):  #recibe como argumento el monto de la compra
         self.saldo_pagar += monto   #el saldo a pagar del usuario aumenta en la cantidad del valor recibido
 
-# pagar_tarjeta(self, monto): crea un método que pague un monto de la
+# pagar_tarjeta(self, monto): crea un método que pague un monto de la tarjeta de crédito. haciendo que se reduzca el saldo_pagar.
     def pagar_tarjeta(self, monto):
         self.saldo_pagar -= monto
-
+        if self.saldo_pagar < 0:
+            self.saldo_pagar = 0
 
 # mostrar_saldo_usuario(self): crea un método que imprima el nombre completo del usuario y el saldo a pagar de su tarjeta.Ejemplo: “Usuario: Nariyoshi Miyagi, Saldo a Pagar: $50”
     def mostrar_saldo_usuario(self):
-        return print(self.nombre, self.apellido, ", Saldo a pagar: $"self.saldo_pagar)
+        print(f"Usuario:{self.nombre} {self.apellido}, Saldo a pagar: ${self.saldo_pagar}")
 
 # BONUS: transferir_deuda(self, otro_usuario, monto): crea un método que reduzca la deuda (saldo_pagar) del usuario por el monto, y agrega esa cantidad al saldo_pagar de otro_usuario
     def transferir_deuda(self, otro_usuario, monto):
-        return print(self.nombre, self.apellido, ", Saldo a pagar: $"self.saldo_pagar
-        )
+        if self.saldo_pagar >= monto:
+            self.saldo_pagar -= monto
+            otro_usuario.saldo_pagar += monto
+        else:
+            print("No hay suficiente deuda para transferir")
 
 # Crea el archivo un Python con la clase Usuario, con la base que te proporcionamos
 # Agrega el método pagar_tarjeta a la clase Usuario
@@ -57,3 +61,23 @@ Usuario3.pagar_tarjeta(Usuario3.saldo_pagar())
 Usuario3.pagar_tarjeta(Usuario3.saldo_pagar())
 Usuario3.pagar_tarjeta(Usuario3.saldo_pagar())
 print(Usuario2.mostrar_saldo_usuario())
+
+
+
+##Continuación
+
+Usuario1.hacer_compra(150)
+Usuario1.hacer_compra(300)
+Usuario2.hacer_compra(45)
+Usuario1.pagar_tarjeta(50)
+Usuario1.mostrar_saldo_usuario()
+
+#encadenamiento
+Usuario1.hacer_compra(150).hacer_compra(300).pagar_tarjeta(50).mostrar_saldo_usuario()
+
+#final
+def hacer_compra(self, monto):  #recibe como argumento el monto de la compra
+    self.saldo_pagar += monto   #el saldo a pagar del usuario aumenta en la cantidad del valor recibido
+    return self
+
+#encadenar toda la tarea
