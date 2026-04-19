@@ -77,16 +77,6 @@ cantantes = [
     {"nombre": "Juan Luis Guerra", "pais": "República Dominicana"}
 ]
 
-def iterarDiccionario(lista):
-    for diccionario in lista:
-        line = ""
-        for clave, valor in diccionario.items():
-            line += f"{clave},{valor}, "
-        print(line.strip(", "))
-        
-
-print(iterarDiccionario(cantantes))
-
 ##3. Obtener valores de una lista de diccionarios
 
 def iterarDiccionario2(llave, lista):
