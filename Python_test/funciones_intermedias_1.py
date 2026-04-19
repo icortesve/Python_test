@@ -66,3 +66,25 @@ print("Matriz:", matriz)
 print("Cantantes:", cantantes)
 print("Ciudades:", ciudades)
 print("Coordenadas:", coordenadas)
+
+
+
+## Segunda parte
+
+cantantes = [
+    {"nombre": "Ricky Martin", "pais": "Puerto Rico"},
+    {"nombre": "Chayanne", "pais": "Puerto Rico"},
+    {"nombre": "José José", "pais": "México"},
+    {"nombre": "Juan Luis Guerra", "pais": "República Dominicana"}
+]
+
+
+def iterarDiccionario(lista):
+    for diccionario in lista:
+        line = ""
+        for clave, valor in diccionario.items():
+            line += f"{clave},{valor}, "
+        print(line.strip(", "))
+        
+
+print(iterarDiccionario(cantantes))
