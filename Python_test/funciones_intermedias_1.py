@@ -68,8 +68,6 @@ print("Cantantes:", cantantes)
 print("Ciudades:", ciudades)
 print("Coordenadas:", coordenadas)
 
-
-
 ##2. Iterar a través de una lista de diccionarios
 
 cantantes = [
@@ -78,7 +76,6 @@ cantantes = [
     {"nombre": "José José", "pais": "México"},
     {"nombre": "Juan Luis Guerra", "pais": "República Dominicana"}
 ]
-
 
 def iterarDiccionario(lista):
     for diccionario in lista:
@@ -89,3 +86,13 @@ def iterarDiccionario(lista):
         
 
 print(iterarDiccionario(cantantes))
+
+##3. Obtener valores de una lista de diccionarios
+
+def iterarDiccionario2(llave, lista):
+   for diccionario in lista:
+        print(diccionario[llave])
+        
+iterarDiccionario2("nombre", cantantes)
+iterarDiccionario2("pais", cantantes)
+
