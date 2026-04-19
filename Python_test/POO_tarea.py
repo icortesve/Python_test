@@ -41,7 +41,6 @@ Usuario2 = Usuario("Jam", "Iroquai", "jamiroquai@music.net")
 Usuario3 = Usuario("Mercedes", "Sosa", "msosa@tucuman.gov.ar")
 
 # Haz que el primer usuario haga 2 compras y luego pague su tarjeta. Muestra su saldo
-
 Usuario1.hacer_compra(800) #Primera compra
 Usuario1.hacer_compra(600) #Segunda compra
 Usuario1.pagar_tarjeta(200) #Pago
@@ -50,9 +49,7 @@ Usuario1.mostrar_saldo_usuario() #Mostrar saldo
 ##Encadenamiento:
 Usuario1.hacer_compra(800).hacer_compra(600).pagar_tarjeta(200).mostrar_saldo_usuario()
 
-
 # Haz que el segundo usuario haga 1 compra y luego pague 2 veces su tarjeta. Muestra su saldo
-
 Usuario2.hacer_compra(500) #Primera compra
 Usuario2.pagar_tarjeta(100) #Primer pago
 Usuario2.pagar_tarjeta(200) #Segundo pago
@@ -62,7 +59,6 @@ Usuario2.mostrar_saldo_usuario() #Mostrar saldo
 Usuario2.hacer_compra(500).pagar_tarjeta(100).pagar_tarjeta(200).mostrar_saldo_usuario()
 
 # Haz que el tercer usuario haga 3 compras y luego pague su tarjeta 4 veces. Muestra su saldo
-
 Usuario3.hacer_compra(800) #Primera compra
 Usuario3.hacer_compra(700) #Segunda compra
 Usuario3.hacer_compra(500) #Tercera compra
