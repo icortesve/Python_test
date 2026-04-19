@@ -1,4 +1,5 @@
-#1. Actualizar valores en diccionarios y listas
+
+##1. Actualizar valores en diccionarios y listas
 
 # Lista dentro de lista
 matriz = [ [10, 15, 20], [3, 7, 14] ]
@@ -36,27 +37,27 @@ coordenadas = [
 
 ## Solución dinámica (no conociendo valores de las listas)
 
-# 🔍 1. Reemplazar 3 por 6 en matriz (búsqueda)
+# 1. Reemplazar 3 por 6 en matriz (búsqueda)
 for fila in matriz:
     for i in range(len(fila)):
         if fila[i] == 3:
             fila[i] = 6
 #print(matriz)
 
-# 🔍 2. Cambiar nombre buscando valor
+# 2. Cambiar nombre buscando valor
 for cantante in cantantes:
     if cantante["nombre"] == "Ricky Martin":
         cantante["nombre"] = "Enrique Martin Morales"
 #print(cantantes)
 
-# 🔍 3. Cambiar "Cancún" por "Monterrey"
+# 3. Cambiar "Cancún" por "Monterrey"
 for pais, lista_ciudades in ciudades.items():
     for i in range(len(lista_ciudades)):
         if lista_ciudades[i] == "Cancún":
             lista_ciudades[i] = "Monterrey"
 #print(ciudades)
 
-# 🔍 4. Cambiar latitud (sin asumir posición)
+# 4. Cambiar latitud (sin asumir posición)
 for coord in coordenadas:
     if "latitud" in coord:
         coord["latitud"] = 9.9355431
@@ -69,7 +70,7 @@ print("Coordenadas:", coordenadas)
 
 
 
-## Segunda parte
+##2. Iterar a través de una lista de diccionarios
 
 cantantes = [
     {"nombre": "Ricky Martin", "pais": "Puerto Rico"},
