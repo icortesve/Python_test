@@ -3,23 +3,27 @@ class Usuario:
         self.nombre = nombre
         self.apellido = apellido
         self.email = email
-        self.limite_credito = 30000
-        self.saldo_pagar = 0
+        self.tarjeta = TarjetaCredito(1000, 0.02)
+        #self.limite_credito = 30000
+        #self.saldo_pagar = 0
   
     def hacer_compra(self, monto):  #recibe como argumento el monto de la compra
-        self.saldo_pagar += monto   #el saldo a pagar del usuario aumenta en la cantidad del valor recibido
+        self.tarjeta.compra(monto)
+        #self.saldo_pagar += monto   #el saldo a pagar del usuario aumenta en la cantidad del valor recibido
         return self
 
 # pagar_tarjeta(self, monto): crea un método que pague un monto de la tarjeta de crédito. haciendo que se reduzca el saldo_pagar.
     def pagar_tarjeta(self, monto):
-        self.saldo_pagar -= monto
-        if self.saldo_pagar < 0:
-            self.saldo_pagar = 0
+        self.tarjeta.pago(monto)
+        #self.saldo_pagar -= monto
+        #if self.saldo_pagar < 0:
+        #    self.saldo_pagar = 0
         return self
 
 # mostrar_saldo_usuario(self): crea un método que imprima el nombre completo del usuario y el saldo a pagar de su tarjeta.Ejemplo: “Usuario: Nariyoshi Miyagi, Saldo a Pagar: $50”
     def mostrar_saldo_usuario(self):
-        print(f"Usuario:{self.nombre} {self.apellido}, Saldo a pagar: ${self.saldo_pagar}")
+        print(f"Usuario:{self.nombre} {self.apellido}, Saldo a pagar: ${self.tarjeta.saldo_pagar}")
+        #print(f"Usuario:{self.nombre} {self.apellido}, Saldo a pagar: ${self.saldo_pagar}")
         return self
 
 # BONUS: transferir_deuda(self, otro_usuario, monto): crea un método que reduzca la deuda (saldo_pagar) del usuario por el monto, y agrega esa cantidad al saldo_pagar de otro_usuario
