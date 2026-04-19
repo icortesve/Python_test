@@ -76,6 +76,7 @@ cantantes = [
     {"nombre": "José José", "pais": "México"},
     {"nombre": "Juan Luis Guerra", "pais": "República Dominicana"}
 ]
+iterarDiccionario(cantantes)
 
 ##3. Obtener valores de una lista de diccionarios
 
