@@ -51,7 +51,6 @@ for producto, (suma, total) in precios_por_producto.items():
     promedio = suma / total
     print(producto, ":", promedio)
 
-
 #5. Ingresos por día
 ingresos_por_dia = {}
 for sale in ventas:
@@ -66,3 +65,26 @@ for sale in ventas:
 print("\nIngresos por día:")
 for fecha, ingreso in ingresos_por_dia.items():
     print(fecha, ":", ingreso)
+
+#6. Representación de datos
+resumen_ventas = {}
+for producto in ventas_por_producto:
+    cantidad_total = ventas_por_producto[producto]
+    
+    ingresos = 0
+    for sale in ventas:
+       if sale["producto"] == producto:
+          ingresos += sale["cantidad"]*sale["precio"]
+
+    suma, total = precios_por_producto[producto]
+    promedio = suma / total
+
+    resumen_ventas[producto] = {
+        "cantidad_total": cantidad_total,
+        "ingreso_total": ingresos,
+        "precio_promedio": promedio
+    }
+
+print("\nResumen de ventas:")
+for producto, datos in resumen_ventas.items():
+    print(producto, ":", datos)
