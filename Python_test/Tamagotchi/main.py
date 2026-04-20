@@ -12,3 +12,9 @@ mi_dueno = Persona("Juan", "Perez", mi_mascota)
 mi_dueno.darle_comida()
 mi_dueno.curarlo()
 mi_dueno.jugar_con_tamagotchi()
+
+#Bonus Sensei
+class Dragon(Tamagotchi):
+    def lanzar_fuego(self):
+        self.energia -= 20
+        print(f"{self.nombre} lanzó fuego!")
