@@ -1,14 +1,14 @@
 # Importamos las clases necesarias desde nuestros módulos
-from Python_test.Tamagotchi.Tamagotchi2 import Tamagotchi
+from Tamagotchi2 import Tamagotchi
 from Persona import Persona
 
 # 1. Creamos la instancia del Tamagotchi
-mascota = Tamagotchi("Pixel", "Verde")
+mi_mascota = Tamagotchi("Pixel", "Verde")
 
 # 2. Creamos la instancia de la Persona y le asignamos la mascota
-dueno = Persona("Juan", "Perez", mascota)
+mi_dueno = Persona("Juan", "Perez", mi_mascota)
 
 # 3. Probamos la interacción
-dueno.darle_comida()
-dueno.curarlo()
-dueno.jugar_con_tamagotchi()
+mi_dueno.darle_comida()
+mi_dueno.curarlo()
+mi_dueno.jugar_con_tamagotchi()
