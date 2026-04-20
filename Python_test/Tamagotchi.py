@@ -3,7 +3,7 @@ class Persona:
         self.nombre = nombre
         self.apellido = apellido
         self.tamagotchi = tamagotchi
-        
+
     def jugar_con_tamagotchi(self):
         print(f"{self.nombre} está jugando con {self.tamagotchi.nombre}")
         self.tamagotchi.jugar()
@@ -38,3 +38,11 @@ class Tamagotchi:
         self.salud += 20
         self.felicidad -= 5
         print(f"{self.nombre} se está curando. Salud: {self.salud}, Felicidad: {self.felicidad}")
+
+# Crear Instancias
+mascota = Tamagotchi("Pixel", "Verde")
+dueno = Persona("Juan", "Perez", mascota)
+
+dueno.darle_comida()
+dueno.curarlo()
+dueno.jugar_con_tamagotchi()
